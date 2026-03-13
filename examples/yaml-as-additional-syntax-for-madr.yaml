@@ -1,0 +1,48 @@
+---
+metadata:
+  status: decided
+  date: "2025-12-17"
+  decision-makers: OK, OZ
+  consulted: n/a
+
+# A hello world example for the new "MADR goes YAML" ADR template, comments stripped
+
+title: YAML as additional concrete syntax
+
+context-and-problem-statement: The MADR template (abstract syntax) is quite stable. To increase market share, a new concrete syntax should be supported.
+
+decision-drivers:
+- Usability
+- Community size
+- Tool availability
+
+considered-options:
+- JSON <!-- option 1 -->
+- YAML <!-- option 2 -->
+
+decision-outcome:
+
+  chosen-option:
+    link: YAML  # <!-- option 2 -->
+    justification: it is both human- and machine-readable."
+
+  consequences:
+    positive:
+    - Good readability for humans and machines
+    neutral:
+    - Need to create a JSON schema (tools are available)
+
+confirmation: Dec 17 meeting, usage of online schema validation tools
+
+pros-and-cons-of-the-options:
+
+  YAML:
+    pros:
+    - Good, because expressiveness and readability and tool support
+    neutral:
+    - Neutral, because schema is needed
+    cons:
+    - Bad, because indentation matters, easy to make mistakes
+    - Bad, need to retrain some users, might lose Markdown benefits
+
+more-information: n/a

@@ -1,0 +1,78 @@
+---
+metadata:
+  status: proposed
+  date: "2026-01-23"
+  decision-makers: koppor, socadk, ungerts
+
+title: "ADR Syntax (Notation, Meta Model)"
+
+context-and-problem-statement: |
+
+  ADRs primarily target human readers, but machines should also be able to process them.
+  This requirements becomes increasingly important with generative AI becoming mainstream; AI services appreciate structure and semantic anchors.
+  Markdown files can be parsed, there are tools such as pandoc to process them. This has been reported to be tedious.
+
+  * Which notation and format should be used to record Architectural Decisions (ADs)?
+  * Which meta-model is suited to structure and validate AD Records (ADRs)?
+
+# this is an optional element
+decision-drivers:
+- Human readability and understandability, ease of writing
+- Machine readability, parsing effort and convenience
+- Vitality and size of tool ecosystem for notation, community support
+- Stability of notation
+- Ability to write rich text with item lists, **bold** and *italic* settings, tables, hyperlinks
+
+considered-options:
+- &madr Markdown with additional semantic anchors
+- &json JSON and JSON Schema
+- &yaml '[YAML](https://yaml.org/) with JSON Schema validation'
+
+# this is an optional element
+pros-and-cons-of-the-options:
+  # the identifier needs to match the one defined in considered-options
+  madr:
+    # note to ADR reviewers: not a complete discussion!
+    pros:
+    - &madr-pro-1 good for humans
+    neutral:
+    - &madr-neutral-1 MADR has been in use for about 6-7 years
+    cons:
+    - &madr-cons-1 processing effort, lack of tool documentation (pandoc)
+    - &madr-cons-2 open source tooling project stalled
+  json:
+    # note to AD reviewers: not a complete discussion! no cons to show optionality
+    pros:
+    - &json-pro good for machines
+    cons:
+    - &json-con readability for humans debatable
+  yaml:
+    # note to AD reviewers: not a complete discussion! no cons
+    pros:
+    - &yaml-pro best of both worlds, many tools
+    cons:
+    - &yaml-neutral need a YAML processor to validate syntax
+
+decision-outcome:
+  chosen-option:
+    link: YAML (*yaml)  # known limitation: YAML anchors/alias are not modeled in the JSON schema and therefore not validated
+    justification: promising PoC results, YAML goes well with Python, which goes well with AI
+
+  # this is an optional element
+  consequences:
+    positive:
+    # numbers of entries can vary
+    - both human and machine readable
+    - see pros of chosen option (*yaml-pro)  # known limitation: YAML anchors/alias are not modeled in the JSON schema and therefore not validated
+    neutral: []
+    negative:
+    - design and development required
+
+  # this is an optional element
+  confirmation: |
+
+    architect survey, demos, sample data creation, tool R&D
+
+more-information: |
+
+  YAML best practices are listed [here](https://yamlscript.org/blog/2025-07-20/yaml-best-practices/) and the language specification is: <https://yaml.org/spec/1.2.2/>.

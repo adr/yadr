@@ -1,0 +1,33 @@
+metadata:
+  id: Y-nn
+  title: # short title, representative of solved problem and found solution
+  author: nn 
+  date: yyyy-mm-dd
+  version: 'major.minor'
+  status: TODO # e.g., pending, proposed, made, reviewed, accepted, revised, superseded 
+
+# See blog post <https://medium.com/olzzio/y-statements-10eb07b5a177>
+ 
+context: >
+
+  TODO # use case/user story, architectural element (e.g. subsystem, component, connector)
+
+facing: 
+- TODO <!-- decision driver 1 -->
+- TODO <!-- decision driver n -->
+
+decided-for: TODO <!-- option -->
+
+neglected:  
+- TODO <!-- option 1 -->
+- TODO <!-- option 1 -->
+
+to-achieve:  
+  - "Positive Consequence"
+
+accepting-that: 
+  - Negative Consequence
+
+# optional:
+additional-rationale: TODO | 
+  TODO 

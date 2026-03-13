@@ -1,0 +1,9 @@
+ADRs
+MADR
+MADRs
+Nygard
+RACI
+YADR
+uv
+yamlfix
+yamllint

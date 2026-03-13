@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "author": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title"
+      ]
+    },
+    "context": {
+      "type": "string"
+    },
+    "facing": {
+      "type": "array",
+      "items": 
+        {
+          "type": "string"
+        }
+      
+    },
+    "decided-for": {
+      "type": "string"
+    },
+    "neglected": {
+      "type": "array",
+      "items": 
+        {
+          "type": "string"
+        }
+      
+    },
+    "to-achieve": {
+      "type": "array",
+      "items":
+        {
+          "type": "string"
+        }
+    },
+    "accepting-that": {
+      "type": "array",
+      "items":
+        {
+          "type": "string"
+        }
+    },
+    "additional-rationale": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "context",
+    "facing",
+    "decided-for",
+    "to-achieve",
+    "accepting-that"
+  ]
+}

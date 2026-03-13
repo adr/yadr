@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "status": "proposed",
+    "date": "2026-01-23",
+    "decision-makers": "koppor, socadk, ungerts"
+  },
+  "title": "ADR Syntax (Notation, Meta Model)",
+  "context-and-problem-statement": "\nADRs primarily target human readers, but machines should also be able to process them.\nThis requirements becomes increasingly important with generative AI becoming mainstream; AI services appreciate structure and semantic anchors.\nMarkdown files can be parsed, there are tools such as pandoc to process them. This has been reported to be tedious.\n\n* Which notation and format should be used to record Architectural Decisions (ADs)?\n* Which meta-model is suited to structure and validate AD Records (ADRs)?\n",
+  "decision-drivers": [
+    "Human readability and understandability, ease of writing",
+    "Machine readability, parsing effort and convenience",
+    "Vitality and size of tool ecosystem for notation, community support",
+    "Stability of notation",
+    "Ability to write rich text with item lists, **bold** and *italic* settings, tables, hyperlinks"
+  ],
+  "considered-options": [
+    "Markdown ADRs with additional semantic anchors",
+    "JSON and JSON Schema",
+    "[YAML](https://yaml.org/) with JSON Schema validation"
+  ],
+  "pros-and-cons-of-the-options": {
+    "Markdown": {
+      "pros": [
+        "good for humans"
+      ],
+      "neutral": [
+        "MADR has been in use for about 6-7 years"
+      ],
+      "cons": [
+        "processing effort, lack of tool documentation (pandoc)",
+        "open source tooling project stalled"
+      ]
+    },
+    "JSON": {
+      "pros": [
+        "good for machines"
+      ],
+      "cons": [
+        "readability for humans debatable"
+      ]
+    },
+    "YAML": {
+      "pros": [
+        "best of both worlds, many tools"
+      ],
+      "cons": [
+        "need a YAML processor to validate syntax"
+      ]
+    }
+  },
+  "decision-outcome": {
+    "chosen-option": {
+      "link": "YAML (*yaml)",
+      "justification": "promising PoC results, YAML goes well with Python, which goes well with AI"
+    },
+    "consequences": {
+      "positive": [
+        "both human and machine readable",
+        "see pros of chosen option (*yaml-pro)"
+      ],
+      "neutral": [],
+      "negative": [
+        "design and development required"
+      ]
+    },
+    "confirmation": "\narchitect survey, demos, sample data creation, tool R&D\n"
+  },
+  "more-information": "\nYAML best practices are listed [here](https://yamlscript.org/blog/2025-07-20/yaml-best-practices/) and the language specification is: <https://yaml.org/spec/1.2.2/>.\n"
+}

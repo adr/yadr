@@ -1,0 +1,157 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "decision-makers": {
+          "type": "string"
+        },
+        "consulted": {
+          "type": "string"
+        },
+        "informed": {
+          "type": "string"
+        }
+      }
+    },
+    "title": {
+      "type": "string"
+    },
+    "context-and-problem-statement": {
+      "type": "string"
+    },
+    "decision-drivers": {
+      "type": "array",
+      "items":
+        {
+          "type": "string"
+        }
+
+    },
+    "considered-options": {
+      "type": "array",
+      "items":
+        {
+          "type": "string"
+        }
+
+    },
+    "pros-and-cons-of-the-options": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "pros": {
+            "type": "array",
+            "items":
+              {
+                "type": "string"
+              }
+
+          },
+          "neutral": {
+            "type": "array",
+            "items":
+              {
+                "type": "string"
+              }
+
+          },
+          "cons": {
+            "type": "array",
+            "items":
+              {
+                "type": "string"
+              }
+
+          }
+        },
+        "required": [
+          "pros",
+          "cons"
+        ]
+      }
+    },
+    "decision-outcome": {
+      "type": "object",
+      "properties": {
+        "chosen-option": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string"
+            },
+            "justification": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "link",
+            "justification"
+          ]
+        },
+        "consequences": {
+          "type": "object",
+          "properties": {
+            "positive": {
+              "type": "array",
+              "items":
+                {
+                  "type": "string"
+                }
+
+            },
+            "neutral": {
+              "type": "array",
+              "items":
+                {
+                  "type": "string"
+                }
+
+            },
+            "negative": {
+              "type": "array",
+              "items":
+                {
+                  "type": "string"
+                }
+
+            }
+          },
+          "required": [
+            "neutral"
+          ]
+        },
+        "confirmation": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "chosen-option",
+        "consequences"
+      ]
+    },
+    "more-information": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "context-and-problem-statement",
+    "decision-drivers",
+    "considered-options",
+    "decision-outcome"
+  ]
+}

@@ -1,0 +1,61 @@
+---
+metadata:
+  status: TODO
+  date: yyyy-mm-dd
+  decision-makers: TODO
+  consulted: TODO
+  informed: TODO
+
+# This is an experimental YAML port of the MADR template adr-template-bare.md (full template, but no explanations/guiding comments)
+
+title: TODO  # short title, representative of solved problem and found solution
+
+context-and-problem-statement: TODO
+
+decision-drivers:
+- TODO <!-- decision driver 1 -->
+- TODO <!-- decision driver 2 -->
+
+considered-options:
+- &id-of-option-1 '{title of option 1}'
+- &id-of-option-2 '{title of option 2}'
+
+pros-and-cons-of-the-options:
+
+  # the id/title needs to match the one defined in considered-options
+  id-of-option-1:
+    description: |
+      {example | description | pointer to more information | …}
+
+    pros:
+      - &argument-a '{argument a}'
+      - '{argument b}'
+
+    neutral:
+      - &argument-c '{argument c}'
+
+    cons:
+      - &argument-d '{argument d}'
+
+  # same for other options
+
+decision-outcome:
+
+  chosen-option:
+    link: "*id-of-option-1"
+    justification: "Because ..."
+
+  consequences:
+    good:
+    - TODO <!-- argument1 -->
+    - TODO <!-- argument2 -->
+    neutral:
+    - TODO <!-- argument1 -->
+    - TODO <!-- argument2 -->
+    bad:
+    - TODO <!-- argument1 -->
+    - TODO <!-- argument2 -->
+
+confirmation: TODO
+
+more-information: TODO

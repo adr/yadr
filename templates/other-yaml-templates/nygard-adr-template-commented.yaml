@@ -1,0 +1,22 @@
+# This is the template suggested by Michael Nygard in 2011. Most adopters extend it. Comments in sections by @socadk
+
+title: TODO, see blog post ["Documenting Architecture Decisions"](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions)
+
+context: TODO 
+
+# Motivate the need for the decision in a few sentences, for instance in question form. Identify and list decision drivers (aka forces), for instance, desired software quality attributes. Explain at least two options to choose from (aka alternatives). Anti patterns: technology education, background information not related to project requirements, using this section as a substitute for business case, context diagram, component model (and many more). 
+
+decision: TODO, see blog post <https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions)> 
+
+# Make sure to provide rationale for chosen design (a justification). It should comment on the decision drivers (aka criteria, forces) mentioned in the context. It should also explain why the other options are less suited than the chosen one. Anti patterns: merely repeating the decision title in this section, not referring to the context semantically, unethical/irresponsible arguments such as resume-driven development.
+
+status: TODO 
+
+# Agree on valid values for the status information, for instance: required, proposed, decided, reviewed, agreed/accepted, implemented, revised, superseded. Anti pattern: forgetting to provide other meta information here or elsewhere, for instance people involved in the decision making, time and date of state transitions (decision evolution).
+
+consequences: TODO
+
+# Start from the forces from the context. Report the result of the decision enforcement on the design, both good and bad. Discuss multiple stakeholder concerns, both short term and long term, both local an global impact of the decision. Identify follow-on decisions required. Anti pattern: development aspects only, mismatch with context and decision section. 
+
+# More information about ADR creation patterns and anti-patterns: <https://ozimmer.ch/practices/2023/04/03/ADRCreation.html>
+ 

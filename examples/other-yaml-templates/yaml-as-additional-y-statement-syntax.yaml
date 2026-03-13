@@ -1,0 +1,74 @@
+---
+metadata:
+  id: AD-001
+  author: OZ
+  date: 2026-03-09
+  version: "1.1"
+  title: "Use Y-Statements"  # short title, representative of solved problem and found solution
+
+# TODO test after change to new key names in YAML mappings and lists (block collections)
+
+# See blog post <https://medium.com/olzzio/y-statements-10eb07b5a177>
+
+context: Need for an ADR template for our project; many exist  # use case/user story, architectural element (e.g. subsystem, component, connector)
+
+facing:
+- Effort to create and maintain  # <!-- decision driver 1 -->
+- Readability  # <!-- decision driver n -->
+
+decided-for: Y-Statements, in this new YAML template
+
+neglected:
+- Nygardian ADRs
+- MADR full or light
+- others
+
+to-achieve:
+- "A healthy balance between cost and benefit"
+- "Being able to show something new"
+- "Include those on the team who are familiar with YAML"
+
+accepting-that:
+- "Markdown/MADR guys have to be retrained (just a bit)"
+
+additional-rationale: >
+
+  ADRs are great to have, many templates are suited. ADRs keep you CALM, see various blog posts <<https://medium.com/olzzio/y-statements-10eb07b5a177> and ["Y-Statements --- A light template for architectural decision capturing"](https://medium.com/olzzio/y-statements-10eb07b5a177) # optional
+
+# The --- line separates two YAML documents (just to show that this is feasible; could also use two files)
+---
+
+metadata:
+  id: AD-002
+  author: OZ
+  date: 2026-03-07
+  version: "1.1"
+  title: "Render Y-Statements in YAML"  # short title, representative of solved problem and found solution
+  related: AD-001
+# See blog post <https://medium.com/olzzio/y-statements-10eb07b5a177>
+
+context: >
+
+  Y-statement ADRs need a concrete syntax that can be parsed and validated.
+
+facing:
+- Effort to create and maintain  # <!-- decision driver 1 -->
+- Readability  # <!-- decision driver n -->
+
+decided-for: Yet another markup language (YAML)
+
+neglected:
+- Plain text
+- Markdown
+- JSON
+
+to-achieve:
+- A healthy balance between cost and benefit
+- Being able to show something new
+- 'Include those on the team who are familiar with "YAML"'
+
+accepting-that:
+- AD consumers not familiar with YAML might complain
+
+additional-rationale: technology exploration |
+ increase visibility and community outreach  # optional
