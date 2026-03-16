@@ -14,7 +14,7 @@ This repository provides YAML ADR templates and examples.
 
 [^1]: Note that this schema has been designed to validate all array elements, which requires the type definitions of the array elements to be scalar. See answer 1 to the question ["How do I make a jsonschema so that it validates all objects in array?"](https://stackoverflow.com/questions/49319692/how-do-i-make-a-jsonschema-so-that-it-validates-all-objects-in-array) on Stack Overflow for rationale.
 
-[^2]: The template contains a placeholder `id-of-option-1` for the option name in its `pros-and-cons-of-the-options` object. The JSON schema [contains `additionalProperties`](https://stackoverflow.com/a/62242833/873282) object so that options pros and cons are validated properly.
+[^2]: The template contains a placeholder `id-of-option-1` for the option name in its `pros-and-cons-of-the-options` object. The JSON schema [contains an `additionalProperties` object](https://stackoverflow.com/a/62242833/873282) so that options pros and cons are validated properly.
 
 ## Background information and tools
 
