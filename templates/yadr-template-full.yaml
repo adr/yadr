@@ -10,23 +10,23 @@ metadata:
 title: '{short title, representative of solved problem and found solution}'
 
 context-and-problem-statement: |
-  {Describe the context and problem statement, e.g., in free form using two to three sentences or in the form of an illustrative story. 
-  
-  * You may want to articulate the problem in form of a question. 
-  * Consider adding links to collaboration boards or issue management systems. 
-  * Make the scope of the decision explicit, for instance, by calling out or pointing at structural architecture elements (components, connectors, ...).} 
+  {Describe the context and problem statement, e.g., in free form using two to three sentences or in the form of an illustrative story.
+
+  * You may want to articulate the problem in form of a question.
+  * Consider adding links to collaboration boards or issue management systems.
+  * Make the scope of the decision explicit, for instance, by calling out or pointing at structural architecture elements (components, connectors, ...).}
 
 # this is an optional element
 decision-drivers:
-  - '{decision driver 1, e.g., a force, facing concern, …}'
-  - '{decision driver 2, e.g., a force, facing concern, …}'
-  - '… <!-- numbers of drivers can vary -->'
+- '{decision driver 1, e.g., a force, facing concern, …}'
+- '{decision driver 2, e.g., a force, facing concern, …}'
+- '… <!-- numbers of drivers can vary -->'
 
 considered-options:
-  - &id-of-option-1 '{title of option 1}'
-  - &id-of-option-2 '{title of option 2}'
-  - &id-of-option-3 '{title of option 3}'
-  # numbers of options can vary
+- &id-of-option-1 '{title of option 1}'
+- &id-of-option-2 '{title of option 2}'
+- &id-of-option-3 '{title of option 3}'
+# numbers of options can vary
 
 # this is an optional element
 pros-and-cons-of-the-options:
@@ -38,16 +38,16 @@ pros-and-cons-of-the-options:
       {example | description | pointer to more information | …}
 
     pros:
-      - &argument-a '{argument a}'
-      - '{argument b}'
-      # use "neutral" if the given argument weights neither for good nor bad.
+    - &argument-a '{argument a}'
+    - '{argument b}'
+    # use "neutral" if the given argument weights neither for good nor bad.
 
     neutral:
-      - &argument-c '{argument c}'
+    - &argument-c '{argument c}'
 
     cons:
-      - &argument-d '{argument d}'
-      # numbers of pros and cons can vary
+    - &argument-d '{argument d}'
+    # numbers of pros and cons can vary
 
   id-of-option-2:
   # same structure as id-of-option-1
@@ -55,16 +55,16 @@ pros-and-cons-of-the-options:
       {example | description | pointer to more information | …}
 
     pros:
-      - &argument-a '{argument a}'
-      - '{argument b}'
-      # use "neutral" if the given argument weights neither for good nor bad.
+    - &argument-a '{argument a}'
+    - '{argument b}'
+    # use "neutral" if the given argument weights neither for good nor bad.
 
     neutral:
-      - &argument-c '{argument c}'
+    - &argument-c '{argument c}'
 
     cons:
-      - &argument-d '{argument d}'
-      # numbers of pros and cons can vary
+    - &argument-d '{argument d}'
+    # numbers of pros and cons can vary
 
 decision-outcome:
 
@@ -79,21 +79,19 @@ decision-outcome:
   # this is an optional element
   consequences:
     positive:
-      # numbers of entries can vary
-      - *argument-a
-      - '{positive consequence, e.g., improvement of one or more desired qualities, …}'
+    # numbers of entries can vary
+    - *argument-a
+    - '{positive consequence, e.g., improvement of one or more desired qualities, …}'
     neutral:
-      - *argument-c
-      - '{neutral consequence, e.g., resulting activity, new requirement/decision, …}'
+    - *argument-c
+    - '{neutral consequence, e.g., resulting activity, new requirement/decision, …}'
     negative:
-      - *argument-d
-      - '{negative consequence, e.g., compromising one or more desired qualities, …}'
+    - *argument-d
+    - '{negative consequence, e.g., compromising one or more desired qualities, …}'
 
   # this is an optional element
   confirmation: |
-
     {Describe how the implementation / compliance of the ADR can/will be confirmed. Is there any automated or manual fitness function? If so, list it and explain how it is applied. Is the chosen design and its implementation in line with the decision? E.g., a design/code review or a test with a library such as ArchUnit can help validate this. Note that although we classify this element as optional, it is included in many ADRs.}
 
 more-information: |
-
   {You might want to provide additional evidence/confidence for the decision outcome here and/or document the team agreement on the decision and/or define when/how this decision the decision should be realized and if/when it should be re-visited. Links to other decisions and resources might appear here as well.}
