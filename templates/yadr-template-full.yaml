@@ -40,14 +40,15 @@ pros-and-cons-of-the-options:
     pros:
     - &argument-a '{argument a}'
     - '{argument b}'
-    # use "neutral" if the given argument weights neither for good nor bad.
 
+    # use "neutral" if the given argument weights neither for good nor bad.
     neutral:
     - &argument-c '{argument c}'
 
     cons:
     - &argument-d '{argument d}'
-    # numbers of pros and cons can vary
+
+    # numbers of arguments may vary
 
   id-of-option-2:
   # same structure as id-of-option-1
@@ -57,14 +58,12 @@ pros-and-cons-of-the-options:
     pros:
     - &argument-a '{argument a}'
     - '{argument b}'
-    # use "neutral" if the given argument weights neither for good nor bad.
-
+  
     neutral:
     - &argument-c '{argument c}'
 
     cons:
     - &argument-d '{argument d}'
-    # numbers of pros and cons can vary
 
 decision-outcome:
 
