@@ -58,7 +58,7 @@ pros-and-cons-of-the-options:
     pros:
     - &argument-a '{argument a}'
     - '{argument b}'
-  
+
     neutral:
     - &argument-c '{argument c}'
 
